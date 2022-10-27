@@ -1,21 +1,28 @@
 <template>
   <header class="page-header">
-    <div class="container">
-      <ul class="page-header__content">
-        <li>
-          <h1 class="page-header__title">putLogo</h1>
-        </li>
-        <li v-for="item in options" :key="item.id">
-          <h1 class="page-header__title">{{ item.title }}</h1>
-          <!-- <router-link :to="item.link">{{ item.title }}</router-link> -->
-        </li>
-      </ul>
-    </div>
+    <ul class="page-header-content">
+      <li>
+        <a class="logo-img" href="/">
+          <font-awesome-icon icon="fa-file-code" />
+        </a>
+      </li>
+      <li v-for="item in options" :key="item.id">
+        <a :href="item.link">
+          <h1 class="page-header-title">{{ item.title }}</h1>
+        </a>
+        <!-- <router-link :to="item.link">{{ item.title }}</router-link> -->
+      </li>
+    </ul>
   </header>
 </template>
 
 <script setup>
 import { computed } from "vue";
+
+const asdasd = computed(() => {
+  return "computed value";
+});
+
 const options = [
   {
     id: 1,
@@ -38,35 +45,41 @@ const options = [
 <style>
 /* center page-header */
 .page-header {
-  background-color: #1D1D1F;
+  background-color: #000000cc;
   border-bottom: 1px solid #ebebeb;
   position: fixed;
   top: 0;
-  z-index: 100;
-  display: flex;
+  z-index: 9999;
+  display: block;
   width: 100%;
-  border: solid 2px red;
 }
 
-.page-header__content {
+.page-header-content {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
-.page-header__title {
-  font-size: 1rem;
+.page-header-title {
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  color: #F5F5F7;
+  padding: 0.8rem;
+  color: #f5f5f7;
 }
 
-.page-header__description {
-  font-size: 0.875rem;
-  color: #F5F5F7;
-  margin-bottom: 0;
+.page-header-title:hover {
+  color: #d6d6d6;
 }
 
+.logo-img {
+  margin: 0.8rem;
+  font-size: 1.5rem;
+  color: #f5f5f7;
+}
+
+.logo-img:hover {
+  color: #d6d6d6;
+}
 </style>
