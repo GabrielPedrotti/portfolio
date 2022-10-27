@@ -1,8 +1,7 @@
 @import "./base.css";
 
 #app {
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
 
   font-weight: normal;
 }
@@ -17,11 +16,5 @@
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
