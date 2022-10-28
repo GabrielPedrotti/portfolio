@@ -40,11 +40,10 @@ const testComputed = computed(() => {
 
 <style>
 .presentation-gif {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15%;
-  width: 40%;
 }
 
 .technologies {
